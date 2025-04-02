@@ -37,7 +37,7 @@ BankCardData NFC Reader is a C# project that demonstrates how to read and proces
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/BankCardData.git
+   git clone https://github.com/KhanbalaRashidov/BankCardData.git
    ```
 
 2. **Open the Project:**
