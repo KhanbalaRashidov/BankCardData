@@ -28,37 +28,6 @@ namespace BankCardData
         public CardInfo CardInfo { get; set; }
 
         /// <summary>
-        /// Sends a list of hexadecimal commands to the smart card.
-        /// </summary>
-        /// <param name="hexCommands">A list of hexadecimal command strings.</param>
-        public void SendCommands(List<string> hexCommands)
-        {
-            try
-            {
-                // Connect to the card.
-                Connect();
-
-                foreach (var hexCommand in hexCommands)
-                {
-                    // Convert the hex command string to a byte array.
-                    byte[] commandBytes = ConvertHexToBytes(hexCommand);
-                    // Send the command and capture the response.
-                    string response = SetCommand(commandBytes);
-                    // Optionally process the response here if needed.
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
-            finally
-            {
-                // Ensure the connection is closed.
-                Disconnect();
-            }
-        }
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="BankCardReader"/> class.
         /// Connects to the card, selects a bank card application, and extracts card information.
         /// </summary>
